@@ -1,8 +1,8 @@
 package com.github.vkay94.timebar.example
 
-import com.google.android.exoplayer2.extractor.Extractor
-import com.google.android.exoplayer2.extractor.ExtractorsFactory
-import com.google.android.exoplayer2.extractor.mp4.Mp4Extractor
+import androidx.media3.extractor.Extractor
+import androidx.media3.extractor.ExtractorsFactory
+import androidx.media3.extractor.mp4.Mp4Extractor
 
 class Mp4ExtractorFactory : ExtractorsFactory {
 

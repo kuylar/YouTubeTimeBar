@@ -16,6 +16,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.media3.ui.PlayerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.target.Target.SIZE_ORIGINAL
@@ -28,7 +29,7 @@ import com.github.vkay94.timebar.example.databinding.ExoPlaybackControlViewYtBin
 import com.github.vkay94.timebar.example.fragments.MainViewModel
 import com.github.vkay94.timebar.example.fragments.SectionsPagerAdapter
 import com.github.vkay94.timebar.example.fragments.TimeBarAdjustmentsFragment
-import com.google.android.exoplayer2.ui.TimeBar
+import androidx.media3.ui.TimeBar
 import java.util.concurrent.TimeUnit
 
 class MainActivity : BaseVideoActivity() {
@@ -204,13 +205,13 @@ class MainActivity : BaseVideoActivity() {
             Since the timeBar is always visible (in portrait) the scrubber circle is hiding
             when the controls are hidden and (re-)appearing if the controls are shown again
          */
-        binding.previewPlayerView.setControllerVisibilityListener {
-            if (it == View.VISIBLE) {
-                binding.youtubeTimeBar.showScrubber()
-            } else {
-                binding.youtubeTimeBar.hideScrubber()
-            }
-        }
+        binding.previewPlayerView.setControllerVisibilityListener(PlayerView.ControllerVisibilityListener { visibility ->
+			if (visibility == View.VISIBLE) {
+				binding.youtubeTimeBar.showScrubber()
+			} else {
+				binding.youtubeTimeBar.hideScrubber()
+			}
+		})
     }
 
     private val defaultChaptersList = arrayListOf(

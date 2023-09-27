@@ -19,7 +19,7 @@ import androidx.core.view.DisplayCutoutCompat
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.github.vkay94.timebar.utils.boundingBox
 import com.github.vkay94.timebar.utils.center
-import com.google.android.exoplayer2.util.Util
+import androidx.media3.common.util.Util
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -164,7 +164,7 @@ class YouTubeTimeBarPreview(context: Context, private val attrs: AttributeSet?) 
             animate().let {
                 it.duration = duration
                 it.setListener(object : AnimatorListenerAdapter() {
-                    override fun onAnimationEnd(animation: Animator?) {
+                    override fun onAnimationEnd(animation: Animator) {
                         rootLayout.alpha = 0f
                         rootLayout.visibility = View.GONE
                         this@YouTubeTimeBarPreview.visibility = View.GONE

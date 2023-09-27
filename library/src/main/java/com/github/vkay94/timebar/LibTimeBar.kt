@@ -1,12 +1,12 @@
 package com.github.vkay94.timebar
 
-import com.google.android.exoplayer2.ui.TimeBar
+import androidx.media3.ui.TimeBar
 
 /**
  * Interface for time bar views that can display a playback position, buffered position, and
  * duration, and that have a listener for scrubbing (seeking) events.
  *
- * It is based on [ExoPlayer's official TimeBar][com.google.android.exoplayer2.ui.TimeBar]
+ * It is based on [ExoPlayer's official TimeBar][androidx.media3.ui.TimeBar]
  * but it also removes ad-related methods and adds segments/chapters.
  *
  */

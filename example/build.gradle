@@ -50,9 +50,9 @@ dependencies {
     implementation "androidx.core:core-ktx:$versions.core_ktx"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
 
-    // ExoPlayer2
-    implementation "com.google.android.exoplayer:exoplayer-core:$versions.exoplayer"
-    implementation "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayer"
+    // Media3 ExoPlayer
+    implementation "androidx.media3:media3-exoplayer:$versions.media3"
+    implementation "androidx.media3:media3-ui:$versions.media3"
 
     implementation "com.google.android.material:material:$versions.material"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'

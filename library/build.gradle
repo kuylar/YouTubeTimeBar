@@ -40,9 +40,9 @@ dependencies {
     implementation "androidx.core:core-ktx:$versions.core_ktx"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
 
-    // ExoPlayer2
-    implementation "com.google.android.exoplayer:exoplayer-core:$versions.exoplayer"
-    implementation "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayer"
+    // Media3 Exoplayer
+    implementation "androidx.media3:media3-exoplayer:$versions.media3"
+    implementation "androidx.media3:media3-ui:$versions.media3"
 }
 
 // https://ayoubbenkhemis.medium.com/publish-android-library-with-jitpack-be00a29a8174
