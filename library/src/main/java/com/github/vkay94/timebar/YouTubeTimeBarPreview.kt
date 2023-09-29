@@ -22,6 +22,7 @@ import com.github.vkay94.timebar.utils.center
 import androidx.media3.common.util.Util
 import java.util.*
 import java.util.concurrent.TimeUnit
+import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
@@ -282,7 +283,7 @@ class YouTubeTimeBarPreview(context: Context, private val attrs: AttributeSet?) 
 
     private fun isInInterval(newPosition: Long): Boolean {
         return with(latestNormedPosition) {
-            this == -1L || newPosition in this.minus(positionDiff)..this.plus(positionDiff)
+            this == -1L || abs(latestNormedPosition - newPosition) > positionDiff
         }
     }
 
